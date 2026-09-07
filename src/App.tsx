@@ -1,6 +1,8 @@
+import { useState } from 'react'
 import './App.css'
 
 function App() {
+  const [liked, setLiked] = useState(false)
   return (
     <div className="app">
       <header className="navbar">
@@ -31,7 +33,12 @@ function App() {
               <h2>CLASSIC BURGER</h2>
               <p>Juicy beef patty with fresh vegetables and special sauce.</p>
               <span className="price">$8.99</span>
-              <button className="heart">♡</button>
+              <button
+  className="heart"
+  onClick={() => setLiked(!liked)}
+>
+  {liked ? '♥' : '♡'}
+</button>
             </div>
 
             <div className="burger-card">
