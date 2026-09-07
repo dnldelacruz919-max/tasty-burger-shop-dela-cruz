@@ -1,121 +1,69 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
+    <div className="app">
+      <header className="navbar">
+        <div className="logo">TASTY BURGER</div>
+
+        <nav>
+          <a href="#about">ABOUT</a>
+          <a href="#menu">OUR MENU</a>
+          <a href="#shop">SHOP</a>
+          <a href="#contact">CONTACT</a>
+        </nav>
+
+        <button className="cart">🛒</button>
+      </header>
+
+      <main>
+        <section className="menu-section" id="menu">
+          <h1>OUR CRAZY BURGERS</h1>
+
+          <p className="intro">
+            Delicious burgers made with fresh ingredients and packed with flavor.
           </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
 
-      <div className="ticks"></div>
+          <div className="burger-grid">
+            <div className="burger-card">
+              <div className="burger-image">🍔</div>
+              <div className="rating">★★★★★</div>
+              <h2>CLASSIC BURGER</h2>
+              <p>Juicy beef patty with fresh vegetables and special sauce.</p>
+              <span className="price">$8.99</span>
+              <button className="heart">♡</button>
+            </div>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+            <div className="burger-card">
+              <div className="burger-image">🍔</div>
+              <div className="rating">★★★★★</div>
+              <h2>CHEESE BURGER</h2>
+              <p>Classic beef burger topped with delicious melted cheese.</p>
+              <span className="price">$9.99</span>
+              <button className="heart">♡</button>
+            </div>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+            <div className="burger-card">
+              <div className="burger-image">🍔</div>
+              <div className="rating">★★★★★</div>
+              <h2>DOUBLE BURGER</h2>
+              <p>Two juicy patties stacked together for extra flavor.</p>
+              <span className="price">$11.99</span>
+              <button className="heart">♡</button>
+            </div>
+
+            <div className="burger-card">
+              <div className="burger-image">🍔</div>
+              <div className="rating">★★★★★</div>
+              <h2>SPICY BURGER</h2>
+              <p>A flavorful burger with a delicious spicy kick.</p>
+              <span className="price">$10.99</span>
+              <button className="heart">♡</button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
   )
 }
 
